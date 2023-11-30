@@ -1,0 +1,19 @@
+# datasource and jpa configuration
+spring:
+  datasource:
+    password: letmein
+    username: root
+    url: jdbc:h2:file:./data/serverdb
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+# server config
+server:
+  port: 8080
